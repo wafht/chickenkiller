@@ -5,8 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wafht</groupId>
-    <artifactId>akka-testrun</artifactId>
+    <artifactId>wafht</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
     <repositories>
         <repository>
             <id>typesafe</id>
@@ -15,6 +17,9 @@
         </repository>
     </repositories>
 
+    <modules>
+ 	<module>akka-testrun</module>
+    </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8
         </project.build.sourceEncoding>
@@ -51,19 +56,7 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifestEntries>
-                            <Rose>*</Rose>
-                        </manifestEntries>
-                    </archive>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
-
 
 </project>
