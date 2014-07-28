@@ -17,7 +17,7 @@ public class MapActor extends UntypedActor {
         if (o instanceof String) {
             System.out.println("mapactor receive msg:" + o);
             String msg = (String) o;
-            getSender().tell(evaluateExpression(msg));
+            getSender().tell(evaluateExpression(msg), self());
         } else {
             unhandled(o);
         }
